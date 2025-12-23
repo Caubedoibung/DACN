@@ -1,0 +1,48 @@
+name: my_diary
+description: My Diary - A fitness tracking app extracted from Flutter UI Templates
+
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.8.1
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+  cupertino_icons: ^1.0.8
+  vector_math: ^2.1.4
+  http: ^0.13.6
+  http_parser: ^4.0.2
+  shared_preferences: ^2.1.1
+  cached_network_image: ^3.2.3
+  intl: 0.20.2
+  qr_flutter: ^4.1.0
+  image_picker: ^1.0.7
+  fl_chart: ^0.69.0
+  url_launcher: ^6.2.4
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+
+flutter:
+  uses-material-design: true
+  generate: true
+
+  assets:
+    - assets/fitness_app/
+    - assets/season/
+    - assets/weather/
+
+  fonts:
+    - family: Roboto
+      fonts:
+        - asset: assets/fonts/Roboto-Bold.ttf
+        - asset: assets/fonts/Roboto-Regular.ttf
+        - asset: assets/fonts/Roboto-Medium.ttf
+          weight: 400

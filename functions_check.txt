@@ -1,0 +1,160 @@
+                                                        pg_get_functiondef                                                         
+-----------------------------------------------------------------------------------------------------------------------------------
+ CREATE OR REPLACE FUNCTION public.reset_daily_water_utc7()                                                                       +
+  RETURNS void                                                                                                                    +
+  LANGUAGE plpgsql                                                                                                                +
+ AS $function$                                                                                                                    +
+ DECLARE                                                                                                                          +
+     v_reset_date DATE;                                                                                                           +
+ BEGIN                                                                                                                            +
+     -- Get current date in UTC+7 (Vietnam time)                                                                                  +
+     -- PostgreSQL stores timestamps in UTC, so we need to convert                                                                +
+     -- Vietnam is UTC+7, so we subtract 7 hours from UTC to get Vietnam time                                                     +
+     v_reset_date := (NOW() AT TIME ZONE 'Asia/Ho_Chi_Minh')::DATE;                                                               +
+                                                                                                                                  +
+     -- Delete all WaterLog entries for yesterday (in Vietnam time)                                                               +
+     -- This effectively resets the water tracking                                                                                +
+     -- Actually, we don't delete - we just ensure DailySummary.total_water is reset                                              +
+     -- The reset happens by checking if the date has changed                                                                     +
+                                                                                                                                  +
+     -- Update DailySummary to reset total_water for the new day                                                                  +
+     -- This is handled by the application logic, but we can add a trigger                                                        +
+     -- that ensures water is reset when date changes                                                                             +
+                                                                                                                                  +
+     RAISE NOTICE 'Water reset check for date: %', v_reset_date;                                                                  +
+ END;                                                                                                                             +
+ $function$                                                                                                                       +
+ 
+ CREATE OR REPLACE FUNCTION public.check_and_reset_water_if_new_day(p_user_id integer)                                            +
+  RETURNS void                                                                                                                    +
+  LANGUAGE plpgsql                                                                                                                +
+ AS $function$                                                                                                                    +
+ DECLARE                                                                                                                          +
+     v_last_reset_date DATE;                                                                                                      +
+     v_current_date DATE;                                                                                                         +
+     v_user_timezone TEXT := 'Asia/Ho_Chi_Minh';                                                                                  +
+ BEGIN                                                                                                                            +
+     -- Get current date in Vietnam timezone                                                                                      +
+     v_current_date := (NOW() AT TIME ZONE v_user_timezone)::DATE;                                                                +
+                                                                                                                                  +
+     -- Get last reset date from UserSetting - use a custom column or just check daily summary                                    +
+     -- Since UserSetting doesn't have a last_water_reset_date column, we'll check DailySummary instead                           +
+     SELECT MAX(date) INTO v_last_reset_date                                                                                      +
+     FROM DailySummary                                                                                                            +
+     WHERE user_id = p_user_id;                                                                                                   +
+                                                                                                                                  +
+     -- If no data exists, use default date                                                                                       +
+     IF v_last_reset_date IS NULL THEN                                                                                            +
+         v_last_reset_date := '1970-01-01'::DATE;                                                                                 +
+     END IF;                                                                                                                      +
+                                                                                                                                  +
+     -- If date has changed (new day), reset water                                                                                +
+     IF v_current_date > v_last_reset_date THEN                                                                                   +
+         -- Insert or update DailySummary for today with reset water                                                              +
+         INSERT INTO DailySummary (user_id, date, total_water, total_calories, total_protein, total_fat, total_carbs, total_fiber)+
+         VALUES (p_user_id, v_current_date, 0, 0, 0, 0, 0, 0)                                                                     +
+         ON CONFLICT (user_id, date) DO UPDATE                                                                                    +
+         SET total_water = 0;                                                                                                     +
+                                                                                                                                  +
+         RAISE NOTICE 'Water reset for user % on date %', p_user_id, v_current_date;                                              +
+     END IF;                                                                                                                      +
+ END;                                                                                                                             +
+ $function$                                                                                                                       +
+ 
+ CREATE OR REPLACE FUNCTION public.trg_check_water_reset_on_log()                                                                 +
+  RETURNS trigger                                                                                                                 +
+  LANGUAGE plpgsql                                                                                                                +
+ AS $function$                                                                                                                    +
+ BEGIN                                                                                                                            +
+     -- Check and reset water for new day before inserting log                                                                    +
+     PERFORM check_and_reset_water_if_new_day(NEW.user_id);                                                                       +
+     RETURN NEW;                                                                                                                  +
+ END;                                                                                                                             +
+ $function$                                                                                                                       +
+ 
+ CREATE OR REPLACE FUNCTION public.ensure_daily_summary_water_reset(p_user_id integer, p_date date)                               +
+  RETURNS void                                                                                                                    +
+  LANGUAGE plpgsql                                                                                                                +
+ AS $function$                                                                                                                    +
+ DECLARE                                                                                                                          +
+     v_user_timezone TEXT := 'Asia/Ho_Chi_Minh';                                                                                  +
+     v_vietnam_date DATE;                                                                                                         +
+ BEGIN                                                                                                                            +
+     -- Get current date in Vietnam timezone                                                                                      +
+     v_vietnam_date := (NOW() AT TIME ZONE v_user_timezone)::DATE;                                                                +
+                                                                                                                                  +
+     -- If the requested date is today and water hasn't been reset, reset it                                                      +
+     IF p_date = v_vietnam_date THEN                                                                                              +
+         PERFORM check_and_reset_water_if_new_day(p_user_id);                                                                     +
+     END IF;                                                                                                                      +
+ END;                                                                                                                             +
+ $function$                                                                                                                       +
+ 
+ CREATE OR REPLACE FUNCTION public.trg_check_mediterranean_reset_on_update()                                                      +
+  RETURNS trigger                                                                                                                 +
+  LANGUAGE plpgsql                                                                                                                +
+ AS $function$\r                                                                                                                  +
+ DECLARE\r                                                                                                                        +
+   vietnam_date DATE;\r                                                                                                           +
+   last_reset_date DATE;\r                                                                                                        +
+ BEGIN\r                                                                                                                          +
+   -- Get current date in Vietnam timezone\r                                                                                      +
+   vietnam_date := get_vietnam_date();\r                                                                                          +
+   \r                                                                                                                             +
+   -- Check last reset date\r                                                                                                     +
+   SELECT reset_date INTO last_reset_date\r                                                                                       +
+   FROM daily_reset_history\r                                                                                                     +
+   WHERE reset_type = 'mediterranean'\r                                                                                           +
+   ORDER BY reset_date DESC\r                                                                                                     +
+   LIMIT 1;\r                                                                                                                     +
+   \r                                                                                                                             +
+   -- If new day in Vietnam, reset all users\r                                                                                    +
+   IF last_reset_date IS NULL OR last_reset_date < vietnam_date THEN\r                                                            +
+     PERFORM reset_daily_mediterranean_utc7();\r                                                                                  +
+   END IF;\r                                                                                                                      +
+   \r                                                                                                                             +
+   RETURN NEW;\r                                                                                                                  +
+ END;\r                                                                                                                           +
+ $function$                                                                                                                       +
+ 
+ CREATE OR REPLACE FUNCTION public.reset_daily_mediterranean_utc7()                                                               +
+  RETURNS void                                                                                                                    +
+  LANGUAGE plpgsql                                                                                                                +
+ AS $function$\r                                                                                                                  +
+ DECLARE\r                                                                                                                        +
+   vietnam_date DATE;\r                                                                                                           +
+   last_reset_date DATE;\r                                                                                                        +
+ BEGIN\r                                                                                                                          +
+   -- Get current date in Vietnam timezone\r                                                                                      +
+   vietnam_date := get_vietnam_date();\r                                                                                          +
+   \r                                                                                                                             +
+   -- Check if we already reset today (Vietnam time)\r                                                                            +
+   SELECT reset_date INTO last_reset_date\r                                                                                       +
+   FROM daily_reset_history\r                                                                                                     +
+   WHERE reset_type = 'mediterranean'\r                                                                                           +
+   ORDER BY reset_date DESC\r                                                                                                     +
+   LIMIT 1;\r                                                                                                                     +
+   \r                                                                                                                             +
+   -- Only reset if we haven't reset today\r                                                                                      +
+   IF last_reset_date IS NULL OR last_reset_date < vietnam_date THEN\r                                                            +
+     -- Reset today_calories, today_protein, today_fat, today_carbs in userprofile\r                                              +
+     UPDATE userprofile\r                                                                                                         +
+     SET \r                                                                                                                       +
+       today_calories = 0,\r                                                                                                      +
+       today_protein = 0,\r                                                                                                       +
+       today_fat = 0,\r                                                                                                           +
+       today_carbs = 0;\r                                                                                                         +
+     \r                                                                                                                           +
+     -- Log the reset\r                                                                                                           +
+     INSERT INTO daily_reset_history (reset_type, reset_date, reset_timestamp)\r                                                  +
+     VALUES ('mediterranean', vietnam_date, CURRENT_TIMESTAMP)\r                                                                  +
+     ON CONFLICT (reset_type, reset_date) DO NOTHING;\r                                                                           +
+     \r                                                                                                                           +
+     RAISE NOTICE 'Mediterranean diet reset completed for % users on %', \r                                                       +
+       (SELECT COUNT(*) FROM userprofile), vietnam_date;\r                                                                        +
+   END IF;\r                                                                                                                      +
+ END;\r                                                                                                                           +
+ $function$                                                                                                                       +
+ 
+(6 rows)
+

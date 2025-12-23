@@ -1,0 +1,699 @@
+{
+  "@@locale": "vi",
+  "appName": "My Diary",
+  "settings": "Cài đặt",
+  "language": "Ngôn ngữ",
+  "vietnamese": "Tiếng Việt",
+  "english": "Tiếng Anh",
+  "interface": "Giao diện",
+  "interfaceMode": "Chế độ giao diện",
+  "automatic": "Tự động",
+  "light": "Sáng",
+  "dark": "Tối",
+  "seasonalInterface": "Giao diện theo mùa",
+  "autoChangeByMonth": "Tự động thay đổi theo tháng",
+  "seasonMode": "Chế độ mùa",
+  "automaticByMonth": "Tự động (theo tháng)",
+  "manual": "Thủ công",
+  "off": "Tắt",
+  "fallingLeaves": "Hiệu ứng lá rụng",
+  "fallingLeavesEffect": "Hiệu ứng lá rơi mùa thu",
+  "weather": "Thời tiết",
+  "weatherCity": "Thành phố thời tiết",
+  "windDirection": "Hướng gió",
+  "background": "Nền",
+  "backgroundImage": "Hình nền",
+  "enableBackgroundImage": "Bật hình nền",
+  "backgroundImageUrl": "URL hình nền",
+  "effectIntensity": "Cường độ hiệu ứng",
+  "low": "Thấp",
+  "medium": "Trung bình",
+  "high": "Cao",
+  "save": "Lưu",
+  "cancel": "Hủy",
+  "home": "Trang chủ",
+  "health": "Sức khỏe",
+  "statistics": "Thống kê",
+  "account": "Tài khoản",
+  "dietaryFiber": "Chất xơ",
+  "fat": "Chất béo",
+  "totalFiber": "Tổng chất xơ",
+  "ofDailyGoal": "của mục tiêu hàng ngày {goal}",
+  "@ofDailyGoal": {
+    "placeholders": {
+      "goal": {
+        "type": "String"
+      }
+    }
+  },
+  "done": "Hoàn thành",
+  "goalNotSet": "Chưa đặt mục tiêu",
+  "calories": "Calories",
+  "protein": "Protein",
+  "carbs": "Carbohydrate",
+  "today": "Hôm nay",
+  "yesterday": "Hôm qua",
+  "thisWeek": "Tuần này",
+  "thisMonth": "Tháng này",
+  "addMeal": "Thêm bữa ăn",
+  "breakfast": "Bữa sáng",
+  "lunch": "Bữa trưa",
+  "dinner": "Bữa tối",
+  "snack": "Bữa phụ",
+  "search": "Tìm kiếm",
+  "noResults": "Không tìm thấy kết quả",
+  "loading": "Đang tải...",
+  "error": "Lỗi",
+  "retry": "Thử lại",
+  "login": "Đăng nhập",
+  "register": "Đăng ký",
+  "email": "Email",
+  "password": "Mật khẩu",
+  "confirmPassword": "Xác nhận mật khẩu",
+  "forgotPassword": "Quên mật khẩu?",
+  "name": "Tên",
+  "age": "Tuổi",
+  "gender": "Giới tính",
+  "male": "Nam",
+  "female": "Nữ",
+  "weight": "Cân nặng",
+  "height": "Chiều cao",
+  "activityLevel": "Mức độ hoạt động",
+  "goal": "Mục tiêu",
+  "loseWeight": "Giảm cân",
+  "maintainWeight": "Duy trì cân nặng",
+  "gainWeight": "Tăng cân",
+  "vitamins": "Vitamin",
+  "minerals": "Khoáng chất",
+  "aminoAcids": "Axit amin",
+  "fibers": "Chất xơ",
+  "fats": "Chất béo",
+  "information": "Thông tin",
+  "code": "Mã",
+  "group": "Nhóm",
+  "unit": "Đơn vị",
+  "rda": "RDA",
+  "personalRecommendation": "Khuyến nghị cá nhân",
+  "benefits": "Lợi ích",
+  "description": "Mô tả",
+  "foods": "Thực phẩm",
+  "contraindications": "Chống chỉ định",
+  "recommended": "Khuyến nghị",
+  "consumed": "Đã tiêu thụ",
+  "remaining": "Còn lại",
+  "left": "còn lại",
+  "g": "g",
+  "mg": "mg",
+  "microgram": "μg",
+  "ml": "ml",
+  "l": "L",
+  "kg": "kg",
+  "cm": "cm",
+  "m": "m",
+  "customizeMealDistribution": "Tùy chỉnh phân bổ bữa ăn",
+  "percentagesMustSumTo100": "Tổng phần trăm phải bằng 100",
+  "timeFormatMustBeHHmm": "Định dạng thời gian phải là HH:mm (ví dụ: 07:00)",
+  "percentage": "Phần trăm",
+  "timeUtc7": "Thời gian (UTC+7)",
+  "record": "Ghi nhận",
+  "deleteDrink": "Xóa đồ uống",
+  "confirmDeleteDrink": "Bạn có chắc muốn xóa đồ uống này khỏi thư viện của bạn?",
+  "delete": "Xóa",
+  "cannotDeleteDrink": "Không thể xóa đồ uống",
+  "drinkDetail": "Chi tiết nước uống",
+  "drinkNotFound": "Không tìm thấy đồ uống",
+  "noIngredientInfo": "Chưa có thông tin nguyên liệu",
+  "quickEntry": "Nhập nhanh (ml hoặc L)",
+  "example250Or03L": "Ví dụ: 250 hoặc 0.3L",
+  "pleaseEnterValidWaterAmount": "Vui lòng nhập lượng nước hợp lệ",
+  "recordButton": "Ghi",
+  "settingsSaved": "Cài đặt đã được lưu",
+  "enableWeatherUpdateFirst": "Bật cập nhật thời tiết trước",
+  "drinkDeleted": "Đã xóa đồ uống",
+  "addDrink": "Thêm đồ uống",
+  "edit": "Chỉnh sửa",
+  "add": "Thêm",
+  "nameCannotBeEmpty": "Tên không được để trống",
+  "showToAllUsers": "Hiển thị cho tất cả người dùng",
+  "noSugar": "Không đường",
+  "selectIngredient": "Chọn nguyên liệu",
+  "enterKeywordToSearchFood": "Nhập từ khóa để tìm kiếm thực phẩm",
+  "createDrink": "Tạo đồ uống",
+  "hydration": "Hydration",
+  "noIngredientsYet": "Chưa có nguyên liệu nào",
+  "saveDrink": "Lưu đồ uống",
+  "manageDrinks": "Quản lý đồ uống",
+  "confirmDeleteDrinkQuestion": "Bạn có chắc muốn xóa đồ uống này?",
+  "deleteFailed": "Xóa thất bại",
+  "manageFoods": "Quản lý thực phẩm",
+  "addFood": "Thêm thực phẩm",
+  "page": "Trang",
+  "noNutritionInfo": "Chưa có thông tin dinh dưỡng",
+  "confirmDelete": "Xác nhận xóa",
+  "confirmDeleteFood": "Bạn có chắc muốn xóa thực phẩm \"{foodName}\"?",
+  "@confirmDeleteFood": {
+    "placeholders": {
+      "foodName": {
+        "type": "String"
+      }
+    }
+  },
+  "foodDeletedSuccessfully": "Xóa thực phẩm thành công",
+  "cannotConnectToServer": "Không thể kết nối máy chủ",
+  "errorLoadingList": "Lỗi tải danh sách",
+  "noDrinkRecipes": "Chưa có công thức nước uống",
+  "pleaseSelectDrink": "Hãy chọn một đồ uống để tiếp tục.",
+  "drinksNotFound": "Không tìm thấy đồ uống",
+  "pleaseAddAtLeastOneIngredient": "Vui lòng thêm ít nhất một nguyên liệu",
+  "recipes": "Công thức nấu ăn",
+  "mealTemplates": "Mẫu bữa ăn",
+  "cannotLoadStatistics": "Không thể tải thống kê",
+  "error": "Lỗi",
+  "manageHealthConditions": "Quản lý tình trạng sức khỏe",
+  "noDiseasesInSystem": "Chưa có bệnh nào trong hệ thống",
+  "errorLoadingListColon": "Lỗi khi tải danh sách",
+  "updateAccordingToWeather": "Cập nhật theo thời tiết",
+  "changeInterfaceByCity": "Thay đổi giao diện theo thành phố",
+  "weatherEffects": "Hiệu ứng theo thời tiết",
+  "rainSnowFog": "Mưa, tuyết, sương mù...",
+  "effectIntensityTitle": "Cường độ hiệu ứng",
+  "windDirectionTitle": "Hướng gió",
+  "useCustomBackgroundImage": "Sử dụng ảnh nền tùy chỉnh",
+  "description": "Mô tả",
+  "addDrink": "Thêm đồ uống",
+  "drinkCreated": "Đồ uống đã được tạo",
+  "failed": "Thất bại",
+  "ingredient": "Nguyên liệu",
+  "noIngredientsYet": "Chưa có nguyên liệu nào",
+  "confirmDelete": "Xác nhận xóa",
+  "confirmDeleteFood": "Bạn có chắc muốn xóa thực phẩm \"{foodName}\"?",
+  "@confirmDeleteFood": {
+    "placeholders": {
+      "foodName": {
+        "type": "String"
+      }
+    }
+  },
+  "foodDeletedSuccessfully": "Xóa thực phẩm thành công",
+  "page": "Trang",
+  "noNutritionInfo": "Chưa có thông tin dinh dưỡng",
+  "manageFoods": "Quản lý thực phẩm",
+  "addFood": "Thêm thực phẩm",
+  "cannotLoadStatistics": "Không thể tải thống kê",
+  "errorColon": "Lỗi",
+  "manageHealthConditions": "Quản lý tình trạng sức khỏe",
+  "noDiseasesInSystem": "Chưa có bệnh nào trong hệ thống",
+  "errorLoadingListColon": "Lỗi khi tải danh sách",
+  "addDisease": "Thêm bệnh",
+  "confirmDeleteDisease": "Bạn có chắc muốn xóa bệnh \"{diseaseName}\"?",
+  "@confirmDeleteDisease": {
+    "placeholders": {
+      "diseaseName": {
+        "type": "String"
+      }
+    }
+  },
+  "diseaseDeletedSuccessfully": "Đã xóa bệnh thành công",
+  "noAdjustments": "Chưa có điều chỉnh",
+  "noAvoidList": "Chưa có danh sách cần tránh",
+  "diseaseUpdatedSuccessfully": "Đã cập nhật bệnh thành công",
+  "diseaseAddedSuccessfully": "Đã thêm bệnh mới thành công",
+  "weatherUpdated": "Đã cập nhật thời tiết",
+  "showToAllUsers": "Hiển thị cho tất cả người dùng",
+  "noSugar": "Không đường",
+  "enterKeywordToSearchFood": "Nhập từ khóa để tìm kiếm thực phẩm",
+  "medicationMarked": "Đã đánh dấu uống thuốc",
+  "editProfile": "Chỉnh sửa hồ sơ",
+  "recipeDeleted": "Đã xóa công thức",
+  "recipeDeleteError": "Lỗi xóa công thức",
+  "recipeAddedToMeal": "Đã thêm công thức vào bữa ăn",
+  "recipeAddToMealError": "Lỗi thêm vào bữa ăn",
+  "recipeLoadError": "Lỗi tải công thức",
+  "recipeLoadDetailError": "Lỗi tải chi tiết",
+  "createFirstRecipe": "Tạo công thức đầu tiên",
+  "addToMeal": "Thêm vào bữa ăn",
+  "deleteRecipe": "Xóa công thức",
+  "confirmDeleteRecipe": "Bạn có chắc muốn xóa công thức này?",
+  "pleaseLoginToUseChat": "Vui lòng đăng nhập để sử dụng tính năng chat",
+  "errorLoadingMessages": "Lỗi tải tin nhắn",
+  "errorSendingMessage": "Lỗi gửi tin nhắn",
+  "errorAnalyzingImage": "Lỗi phân tích ảnh",
+  "errorSendingImage": "Lỗi gửi ảnh",
+  "errorProcessing": "Lỗi xử lý",
+  "bodyMeasurement": "Đo lường cơ thể",
+  "mediterraneanDiet": "Chế độ ăn Địa Trung Hải",
+  "mealsToday": "Bữa ăn hôm nay",
+  "vitamins": "Vitamin",
+  "aminoAcids": "Axit amin",
+  "minerals": "Khoáng chất",
+  "water": "Nước",
+  "dietaryFiber": "Chất xơ",
+  "fat": "Chất béo",
+  "details": "Chi tiết",
+  "customize": "Tùy chỉnh",
+  "hydrationPercent": "Hydration {percent}%",
+  "@hydrationPercent": {
+    "placeholders": {
+      "percent": {
+        "type": "String"
+      }
+    }
+  },
+  "vitaminC": "Vitamin C",
+  "calcium": "Canxi",
+  "fiber": "Chất xơ",
+  "omega3": "Omega-3",
+  "cameraNutritionScanner": "Máy quét dinh dưỡng bằng camera",
+  "comingSoon": "Sắp ra mắt",
+  "failedToSave": "Lưu thất bại",
+  "network": "Mạng",
+  "aquaSmartBottle": "Aqua SmartBottle",
+  "weight": "Cân nặng",
+  "height": "Chiều cao",
+  "bmi": "BMI",
+  "lbs": "lbs",
+  "eaten": "Đã ăn",
+  "burned": "Đã đốt",
+  "kcalLeft": "Kcal còn lại",
+  "topMinerals": "Khoáng chất hàng đầu",
+  "tapDetailsToSeeFullMineralsTable": "Nhấn Chi tiết để xem bảng khoáng chất đầy đủ và lượng khuyến nghị hàng ngày.",
+  "tapDetailsToSeeFullVitaminTable": "Nhấn Chi tiết để xem bảng vitamin đầy đủ và lượng khuyến nghị hàng ngày.",
+  "tapDetailsToSeeFullAminoAcidTable": "Nhấn Chi tiết để xem bảng axit amin đầy đủ và lượng khuyến nghị.",
+  "cookingRecipes": "Công Thức Nấu Ăn",
+  "exploreVietnameseDishes": "Khám phá món ăn Việt Nam",
+  "viewAll": "Xem tất cả",
+  "drinkRecipes": "Công Thức Nước Uống",
+  "customizeVolume": "Tự pha chế, tùy chỉnh thể tích",
+  "exploreNow": "Khám phá ngay",
+  "discover": "Khám phá",
+  "fullName": "Họ và tên",
+  "ageLabel": "Tuổi",
+  "heightCm": "Chiều cao (cm)",
+  "weightKg": "Cân nặng (kg)",
+  "activityFactor": "Hệ số vận động (ví dụ 1.2)",
+  "activityLevel": "Mức độ: {level}",
+  "@activityLevel": {
+    "placeholders": {
+      "level": {
+        "type": "String"
+      }
+    }
+  },
+  "dietType": "Kiểu ăn",
+  "allergies": "Dị ứng (chọn):",
+  "healthGoal": "Mục tiêu sức khỏe",
+  "save": "Lưu",
+  "cancel": "Hủy",
+  "profileUpdateSuccess": "Cập nhật hồ sơ thành công",
+  "noResponseFromServer": "Không nhận được phản hồi từ server",
+  "recordWaterIntake": "Ghi nhận lượng nước",
+  "selectDrinkToRecord": "Chọn đồ uống để ghi nhận",
+  "cannotConnectToServer": "Không thể kết nối máy chủ",
+  "errorLoadingList": "Lỗi tải danh sách: {error}",
+  "@errorLoadingList": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "noDrinkRecipesYet": "Chưa có công thức nước uống",
+  "pleaseSelectDrinkToContinue": "Hãy chọn một đồ uống để tiếp tục.",
+  "reset": "Đặt lại",
+  "record": "Ghi nhận",
+  "logout": "Đăng xuất",
+  "personalInformation": "Thông tin cá nhân",
+  "recommendedNutritionalNeeds": "Nhu cầu dinh dưỡng khuyến nghị",
+  "notifications": "Thông báo",
+  "security": "Bảo mật",
+  "help": "Trợ giúp",
+  "about": "Giới thiệu",
+  "notLoggedIn": "Chưa đăng nhập",
+  "user": "Người dùng",
+  "invalidData": "Dữ liệu không hợp lệ",
+  "addToMeal": "Thêm vào bữa ăn",
+  "delete": "Xóa",
+  "confirmDelete": "Xác nhận xóa",
+  "confirmDeleteRecipe": "Bạn có chắc muốn xóa công thức này?",
+  "createFirstRecipe": "Tạo công thức đầu tiên",
+  "deleteRecipe": "Xóa công thức",
+  "dishDetail": "Chi tiết món ăn",
+  "dishNotFound": "Không tìm thấy món ăn",
+  "createDish": "Tạo món ăn",
+  "pleaseEnterDishName": "Vui lòng nhập tên món ăn",
+  "pleaseAddAtLeastOneIngredient": "Vui lòng thêm ít nhất một nguyên liệu",
+  "dishCreatedSuccessfully": "Tạo món ăn thành công!",
+  "other": "Khác",
+  "continueTreatment": "Tiếp tục điều trị",
+  "recovered": "Đã khỏi",
+  "confirmContinueTreatment": "Bạn muốn tiếp tục điều trị cho \"{conditionName}\"?",
+  "@confirmContinueTreatment": {
+    "placeholders": {
+      "conditionName": {
+        "type": "String"
+      }
+    }
+  },
+  "confirm": "Xác nhận",
+  "treatmentExtended": "Đã gia hạn điều trị",
+  "confirmRecovered": "Bạn đã khỏi bệnh \"{conditionName}\"?",
+  "@confirmRecovered": {
+    "placeholders": {
+      "conditionName": {
+        "type": "String"
+      }
+    }
+  },
+  "congratulationsRecovered": "Chúc mừng bạn đã khỏi bệnh! 🎉",
+  "errorLoadingMessages": "Lỗi tải tin nhắn: {error}",
+  "@errorLoadingMessages": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "errorSendingMessage": "Lỗi gửi tin nhắn",
+  "cannotIdentifyConversation": "Không xác định được cuộc hội thoại này",
+  "noMessagesInConversation": "Chưa có tin nhắn nào trong hội thoại này",
+  "errorLoadingNotifications": "Lỗi khi tải thông báo: {error}",
+  "@errorLoadingNotifications": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "allMarkedAsRead": "Đã đánh dấu tất cả đã đọc",
+  "noNotifications": "Không có thông báo",
+  "cannotTakePhoto": "Không thể chụp ảnh: {error}",
+  "@cannotTakePhoto": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "cannotSelectImage": "Không thể chọn ảnh: {error}",
+  "@cannotSelectImage": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "cannotRecognizeFood": "Không nhận diện được thực phẩm trong ảnh. Vui lòng thử lại với ảnh món ăn rõ ràng hơn.",
+  "errorAnalyzingImage": "Lỗi phân tích ảnh. Vui lòng thử lại.",
+  "errorConnectingToAI": "Lỗi kết nối đến AI: {error}",
+  "@errorConnectingToAI": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "savedNutritionInfo": "✓ Đã lưu thông tin dinh dưỡng của {foodName}",
+  "@savedNutritionInfo": {
+    "placeholders": {
+      "foodName": {
+        "type": "String"
+      }
+    }
+  },
+  "errorSavingData": "Lỗi lưu dữ liệu: {error}",
+  "@errorSavingData": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "retakePhoto": "Chụp lại",
+  "cannotLoadFoodInfo": "Không thể tải thông tin thực phẩm",
+  "pleaseSelectFoodOrDish": "Vui lòng chọn thực phẩm hoặc món ăn",
+  "pleaseEnterValidAmount": "Vui lòng nhập khối lượng hợp lệ",
+  "addedToMealSuccessfully": "Đã thêm vào bữa ăn thành công",
+  "errorLoadingDiseaseList": "Lỗi khi tải danh sách bệnh: {error}",
+  "@errorLoadingDiseaseList": {
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "alreadyHaveDisease": "Bạn đang mắc bệnh \"{diseaseName}\" rồi, không thể thêm lại",
+  "@alreadyHaveDisease": {
+    "placeholders": {
+      "diseaseName": {
+        "type": "String"
+      }
+    }
+  },
+  "pleaseSelectStartDate": "Vui lòng chọn ngày bắt đầu điều trị",
+  "pleaseSelectAtLeastOneMedicationTime": "Vui lòng chọn ít nhất một giờ uống thuốc",
+  "diseaseAdded": "Đã thêm \"{diseaseName}\"",
+  "@diseaseAdded": {
+    "placeholders": {
+      "diseaseName": {
+        "type": "String"
+      }
+    }
+  },
+  "notDetermined": "Chưa xác định",
+  "noMeasurements": "Chưa có số đo",
+  "increaseResistance": "Tăng sức đề kháng",
+  "strongBones": "Xương chắc khỏe",
+  "goodDigestion": "Tiêu hóa tốt",
+  "cardiovascularHealth": "Sức khỏe tim mạch",
+  "noMealData": "Chưa có dữ liệu bữa ăn",
+  "searchDish": "Tìm món ăn (vd: Phở, Cơm)...",
+  "searchIngredient": "Tìm nguyên liệu (vd: Thịt bò, Rau)...",
+  "quickAdd": "Thêm nhanh",
+  "featureComingSoon": "Tính năng sẽ được cập nhật sớm!",
+  "dishContainsRestrictedFood": "Món này chứa thực phẩm cần tránh theo tình trạng sức khỏe của bạn",
+  "ingredient": "Nguyên Liệu",
+  "dish": "Món Ăn",
+  "unreadCount": "{count} chưa đọc",
+  "@unreadCount": {
+    "placeholders": {
+      "count": {
+        "type": "String"
+      }
+    }
+  },
+  "notificationDetail": "Chi tiết thông báo",
+  "selectHealthCondition": "Chọn tình trạng sức khỏe",
+  "normal": "Bình thường",
+  "underweight": "Gầy",
+  "overweight": "Thừa cân",
+  "obese": "Béo phì",
+  "severelyUnderweight": "Thiếu cân nặng",
+  "slightlyOverweight": "Hơi thừa",
+  "perfect": "Hoàn hảo",
+  "good": "Tốt",
+  "needAttention": "Cần chú ý",
+  "needImprovement": "Cần cải thiện",
+  "foodRestrictedByHealthCondition": "{foodName} không được thêm do tình trạng sức khỏe",
+  "@foodRestrictedByHealthCondition": {
+    "placeholders": {
+      "foodName": {
+        "type": "String"
+      }
+    }
+  },
+  "deleteDish": "Xóa món ăn",
+  "confirmDeleteDish": "Bạn có chắc muốn xóa \"{dishName}\"?",
+  "@confirmDeleteDish": {
+    "placeholders": {
+      "dishName": {
+        "type": "String"
+      }
+    }
+  },
+  "dishDeleted": "Đã xóa \"{dishName}\"",
+  "@dishDeleted": {
+    "placeholders": {
+      "dishName": {
+        "type": "String"
+      }
+    }
+  },
+  "cannotDeleteDish": "Không thể xóa món ăn ({errorMsg})",
+  "@cannotDeleteDish": {
+    "placeholders": {
+      "errorMsg": {
+        "type": "String"
+      }
+    }
+  },
+  "weightG": "Khối lượng (g)",
+  "notes": "Ghi chú",
+  "close": "Đóng",
+  "enterFoodName": "Nhập tên thực phẩm...",
+  "enterKeywordToSearch": "Nhập từ khóa để tìm kiếm thực phẩm",
+  "nameEnglish": "Tên (English)",
+  "nameVietnamese": "Tên tiếng Việt",
+  "description": "Mô tả",
+  "category": "Danh mục",
+  "baseLiquidNotes": "Base liquid / ghi chú",
+  "defaultVolumeMl": "Thể tích mặc định (ml)",
+  "ingredients": "Nguyên liệu",
+  "saveDrink": "Lưu đồ uống",
+  "noIngredientsYet": "Chưa có nguyên liệu",
+  "noIngredients": "Chưa có nguyên liệu nào",
+  "searchAndAddIngredientsBelow": "Tìm kiếm và thêm nguyên liệu bên dưới",
+  "health": "Sức khỏe",
+  "yourHealthCondition": "Tình trạng sức khỏe của bạn",
+  "inTreatment": "Đang điều trị",
+  "completed": "Hoàn thành",
+  "medicationSchedule": "Lịch uống thuốc",
+  "todayDate": "Hôm nay, {day}/{month}/{year}",
+  "@todayDate": {
+    "placeholders": {
+      "day": {
+        "type": "String"
+      },
+      "month": {
+        "type": "String"
+      },
+      "year": {
+        "type": "String"
+      }
+    }
+  },
+  "morning": "Buổi sáng",
+  "afternoon": "Buổi trưa",
+  "evening": "Buổi tối",
+  "medication": "Thuốc",
+  "taken": "Đã uống",
+  "nextAppointment": "Ngày tới khám",
+  "today": "Hôm nay!",
+  "past": "Đã qua",
+  "daysLeft": "{days} ngày nữa",
+  "@daysLeft": {
+    "placeholders": {
+      "days": {
+        "type": "String"
+      }
+    }
+  },
+  "selectNewEndDate": "Chọn ngày kết thúc mới",
+  "addNewAppointment": "Thêm lịch hẹn mới",
+  "title": "Tiêu đề",
+  "start": "Bắt đầu",
+  "end": "Kết thúc",
+  "passwordMismatch": "Mật khẩu không khớp",
+  "registrationFailed": "Đăng ký thất bại",
+  "required": "Bắt buộc",
+  "invalidEmail": "Email không hợp lệ",
+  "invalidAge": "Tuổi không hợp lệ",
+  "selectGender": "Chọn giới tính",
+  "invalid": "Không hợp lệ",
+  "passwordMinLength": "Mật khẩu >= 6 ký tự",
+  "noData": "Không có dữ liệu",
+  "noResults": "Không tìm thấy kết quả",
+  "currentlyHaveThisCondition": "Đang mắc bệnh này",
+  "treatmentInfo": "Thông tin điều trị",
+  "treatmentStartDate": "Ngày bắt đầu điều trị *",
+  "treatmentEndDateOptional": "Ngày kết thúc điều trị (Tùy chọn)",
+  "selectDate": "Chọn ngày",
+  "selectTime": "Chọn giờ",
+  "confirmAdd": "Xác nhận thêm",
+  "nutritionalNotifications": "Thông báo dinh dưỡng",
+  "markAllAsRead": "Đánh dấu tất cả đã đọc",
+  "refresh": "Làm mới",
+  "notification": "Thông báo",
+  "todayProgress": "Tiến độ hôm nay",
+  "current": "Hiện tại",
+  "target": "Mục tiêu",
+  "justNow": "Vừa xong",
+  "minutesAgo": "{minutes} phút trước",
+  "@minutesAgo": {
+    "placeholders": {
+      "minutes": {
+        "type": "String"
+      }
+    }
+  },
+  "hoursAgo": "{hours} giờ trước",
+  "@hoursAgo": {
+    "placeholders": {
+      "hours": {
+        "type": "String"
+      }
+    }
+  },
+  "daysAgo": "{days} ngày trước",
+  "@daysAgo": {
+    "placeholders": {
+      "days": {
+        "type": "String"
+      }
+    }
+  },
+  "searchDisease": "Tìm kiếm bệnh...",
+  "description": "Mô tả:",
+  "causes": "Nguyên nhân:",
+  "cannotAddDisease": "Không thể thêm bệnh",
+  "notLoggedInNoToken": "Chưa đăng nhập - không tìm thấy token",
+  "water": "Nước",
+  "waterIntakeStatisticsByHour": "Thống kê nước uống theo giờ",
+  "noWaterIntakeRecordedForToday": "Chưa có nước uống được ghi nhận cho ngày này.",
+  "noDataForToday": "Chưa có dữ liệu cho hôm nay",
+  "pleaseRecordYourMealsToSeeDetailedStatistics": "Hãy ghi lại bữa ăn của bạn để xem thống kê chi tiết.",
+  "selectDate": "Chọn ngày",
+  "noDetailedRecordsForToday": "Chưa có ghi nhận chi tiết cho ngày này.",
+  "noDataForThisDate": "Chưa có dữ liệu cho ngày này",
+  "mealHistoryForToday": "Lịch sử bữa ăn trong ngày",
+  "topNutrients": "Chất dinh dưỡng nổi bật",
+  "dishesEaten": "Các món đã ăn",
+  "moreDishes": "+{count} món khác",
+  "@moreDishes": {
+    "placeholders": {
+      "count": {
+        "type": "String"
+      }
+    }
+  },
+  "timeUnknown": "Chưa rõ giờ",
+  "foodUnknown": "Món ăn không rõ",
+  "viewOverview": "Xem tổng quan",
+  "viewDetailsByDate": "Xem chi tiết theo ngày",
+  "breakfast": "Sáng",
+  "lunch": "Trưa",
+  "snack": "Xế",
+  "dinner": "Tối",
+  "january": "Tháng 1",
+  "february": "Tháng 2",
+  "march": "Tháng 3",
+  "april": "Tháng 4",
+  "may": "Tháng 5",
+  "june": "Tháng 6",
+  "july": "Tháng 7",
+  "august": "Tháng 8",
+  "september": "Tháng 9",
+  "october": "Tháng 10",
+  "november": "Tháng 11",
+  "december": "Tháng 12",
+  "sunday": "CN",
+  "monday": "T2",
+  "tuesday": "T3",
+  "wednesday": "T4",
+  "thursday": "T5",
+  "friday": "T6",
+  "saturday": "T7",
+  "dishesToday": "{count} món hôm nay",
+  "@dishesToday": {
+    "placeholders": {
+      "count": {
+        "type": "String"
+      }
+    }
+  },
+  "noMealRecorded": "Chưa ghi nhận món ăn",
+  "breakfastShort": "Sáng",
+  "lunchShort": "Trưa",
+  "snackShort": "Xế",
+  "dinnerShort": "Tối"
+}
+
