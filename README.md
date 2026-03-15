@@ -6,7 +6,21 @@ Hệ thống **Chatbot AI phân tích hình ảnh và cung cấp thông tin dinh
 Ứng dụng cho phép người dùng **đặt câu hỏi về thực phẩm hoặc tải lên hình ảnh món ăn** để AI phân tích và trả về thông tin liên quan.
 
 Tính năng • Kiến trúc • Công nghệ • Cài đặt
+Python – ngôn ngữ chính
 
+FastAPI – framework backend
+
+REST API – kiến trúc API
+
+Google Generative AI – xử lý chatbot AI
+
+Pillow (PIL) – xử lý hình ảnh
+
+Uvicorn – server chạy FastAPI
+
+Swagger/OpenAPI – tài liệu API tự động
+
+python-dotenv – quản lý biến môi trường
 ---
 
 # 📋 Giới thiệu
@@ -224,10 +238,7 @@ Input Validation: kiểm tra dữ liệu đầu vào
 
 💻 Chuyên ngành: Công nghệ phần mềm
 
-📘 facebbook: https://www.facebook.com/tran.khanh.huy.728622?locale=vi_VN
-📧 Email: huymt0401@gmail.com
-💼 LinkedIn: https://www.linkedin.com/in/tr%E1%BA%A7n-huy-792316373/
-🐙 GitHub: https://github.com/Caubedoibung
+
 ---
 # 📄 License
 
