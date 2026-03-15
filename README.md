@@ -1,4 +1,4 @@
-# 📁 AI Chatbot Nutrition System
+# 📁  Nutrition System
 
 Status Python FastAPI AI Image Processing REST API
 
