@@ -33,9 +33,9 @@ Hệ thống được xây dựng nhằm mục đích **học tập và thực h
 | 📷 Phân tích hình ảnh  | Upload hình ảnh món ăn và AI phân tích     | ✅ Hoàn thành |
 | ⚡ REST API             | Xây dựng API bằng FastAPI                  | ✅ Hoàn thành |
 | 📄 API Documentation   | Tự động sinh Swagger                       | ✅ Hoàn thành |
-| 💬 Lưu lịch sử chat    | Lưu lại lịch sử người dùng                 | 📋 Kế hoạch  |
-| 🔐 Xác thực người dùng | JWT Authentication                         | 📋 Kế hoạch  |
-| 📊 Dashboard           | Thống kê dữ liệu người dùng                | 📋 Kế hoạch  |
+| 💬 Lưu lịch sử chat    | Lưu lại lịch sử người dùng                 | ✅ Hoàn thành |
+| 🔐 Xác thực người dùng | JWT Authentication                         | ✅ Hoàn thành |
+| 📊 Dashboard           | Thống kê dữ liệu người dùng                | ✅ Hoàn thành |
 
 ---
 
