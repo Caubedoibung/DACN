@@ -216,17 +216,16 @@ Input Validation: kiểm tra dữ liệu đầu vào
 
 ---
 
-# 👨‍💻 Tác giả
+# 👨‍💻 Tác giả 
 
 **Trần Khánh Huy**
 
-Fresher Backend Developer
+ Backend Developer
 
-🎓 HUTECH University
-💻 Chuyên ngành: Công nghệ thông tin
-
+💻 Chuyên ngành: Công nghệ phần mềm
+fb:https://www.facebook.com/tran.khanh.huy.728622?locale=vi_VN
 GitHub: https://github.com/your-github
-
+linkedin:https://www.linkedin.com/in/tr%E1%BA%A7n-huy-792316373/?isSelfProfile=true
 ---
 
 # 📄 License
