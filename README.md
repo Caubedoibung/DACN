@@ -106,14 +106,45 @@ Image Processing (Pillow)
 
 ```
 DACN-main/
+AI-CHATBOT-NUTRITION-SYSTEM/
 │
-├── ChatbotAPI/
-│   ├── main.py                # FastAPI server
-│   ├── assistant.py           # Logic chatbot AI
-│   ├── requirements.txt       # Danh sách thư viện
+├── app/                            # Main FastAPI Application
+│   ├── main.py                     # Entry point (FastAPI app)
+│   ├── api/                        # API routes
+│   │   ├── routes/                 # Endpoint definitions
+│   │   │   ├── chatbot.py          # Chatbot Q&A APIs
+│   │   │   └── image.py            # Image upload & analysis APIs
+│   │   └── dependencies.py         # Shared dependencies
+│   │
+│   ├── core/                       # Core configurations
+│   │   ├── config.py               # Environment variables
+│   │   └── security.py             # Auth / middleware (if any)
+│   │
+│   ├── models/                     # Data models (Pydantic)
+│   │   ├── request.py              # Request schemas
+│   │   └── response.py             # Response schemas
+│   │
+│   ├── services/                   # Business logic layer
+│   │   ├── chatbot_service.py      # NLP / AI processing
+│   │   ├── image_service.py        # Image processing logic
+│   │   └── nutrition_service.py    # Nutrition analysis logic
+│   │
+│   ├── utils/                      # Helper functions
+│   │   ├── image_processing.py     # Preprocessing images
+│   │   └── constants.py            # Static values
+│   │
+│   └── ai/                         # AI models & integrations
+│       ├── model_loader.py         # Load ML/DL models
+│       └── inference.py            # Prediction logic
 │
-├── .vscode/                   # Cấu hình VS Code
+├── data/                           # Dataset / sample images
+│   └── sample_images/
 │
+├── tests/                          # Unit tests
+│   └── test_api.py
+│
+├── requirements.txt                # Python dependencies
+├── Dockerfile                      # Containerization
 └── README.md
 ```
 
